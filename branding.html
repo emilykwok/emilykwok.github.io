@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Branding</title>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+    <link href="app.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Barlow+Condensed|Amatic+SC|Dancing+Script|Satisfy" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+<script>
+  // Your web app's Firebase configuration
+  var config = {
+    apiKey: "AIzaSyAnA_3P9mB3jfEQmjwQyc9Q7u6c5DS00wQ",
+    authDomain: "portfolio-84248.firebaseapp.com",
+    databaseURL: "https://portfolio-84248.firebaseio.com",
+    projectId: "portfolio-84248",
+    storageBucket: "portfolio-84248.appspot.com",
+    messagingSenderId: "899232390696",
+    appId: "1:899232390696:web:ab2f96ce20d2711c"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(config);
+</script>
+</head>
+
+<body>
+    <a href="index.html" id="title">ellekdesign</a>
+    <div class="menu">
+        <a href="contact.html">Get in Touch</a> 
+        <a href="work.html">My Work</a>
+        <a href="index.html">About Me</a>
+    </div>   
+    <div onclick="jumpTop()" id="top">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    
+    <div id="bg">
+        <p1>BRANDING</p1>
+        <hr>
+    </div>
+    <span class="arrow">
+        <a href="#target" id="a1">
+            <i class="fa fa-angle-down"></i>
+        </a>
+    </span>
+<br><br><br><br><br><br><br><br>
+    
+    <div id="heading">
+        Branding for <i>Solo Pasta</i> 
+    </div>
+     <div class="row" id="target">
+        <div class="column">
+            <img src="imgs/1.png" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="imgs/2.png" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="imgs/3.png" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="imgs/4.png" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="imgs/5.png" style="width:100%" onclick="myFunction(this);">
+        </div>
+    </div>
+    
+    <div class="container"></div>
+    <span onclick="this.parentElement.style.display='none'"class="closeBtn"></span>
+    <img id="selectImg" style="width:40%"><div id="imgText"></div>
+    
+    
+    <div id="heading">
+        Branding for <i>Goldfinch Estates</i>
+    </div>
+    <div class="bg15"></div>
+    
+    <!--<h1 id="items">Others</h1>
+            
+<progress value="0" max="100" id="uploader">0%</progress>
+    
+<input type="file" value="upload" id="fileButton">
+    
+<img src="" alt="image" width="100" height="100" id="holder">
+    
+<script>
+ //get references to th 3 html elments on the page
+ var uploader = document.getElementById("uploader");
+ var fileButton = document.getElementById("fileButton");
+ var holder = document.getElementById("holder");
+
+ //get a ref to Firebase Storage
+ var storage = firebase.storage();
+
+ ////////////// Will
+ function getImageForPath(p){
+ var storageRef = firebase.storage().ref();
+ var spaceRef = storageRef.child(p);
+ storageRef.child(p).getDownloadURL().then(function(url) {
+ var fullurl = url;
+ alert(fullurl);
+ holder.src = fullurl;
+ }).catch(function(error) {
+ //catch error here
+ });
+ }
+ getImageForPath('images/puppy1.jpg');
+ /////////////
+ fileButton.addEventListener('change', function(e){
+ //get the file
+ alert("uploading file...");
+ var file = e.target.files[0];
+ //create the storage ref
+ var storageRef = firebase.storage().ref('images/'+file.name);
+ //uplaod the file
+ var task = storageRef.put(file);
+ //update the progress bar
+
+ task.on('state_changed',
+ function progress(snapshot) {
+ var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+ uploader.value = percentage;
+ },
+ function error(err){
+ console.log(err);
+ },
+ function complete(){
+ alert("upload complete");
+ }
+ );
+ });
+ </script>-->
+    
+<script src="app.js"></script>
+
+</body>
+    
+</html>

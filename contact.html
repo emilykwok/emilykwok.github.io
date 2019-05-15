@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Me</title>
+    <link href="app.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Barlow+Condensed|Amatic+SC|Dancing+Script|Satisfy" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <a href="index.html" id="title">ellekdesign</a>
+    <div class="menu">
+        <a href="contact.html">Get in Touch</a> 
+        <a href="work.html">My Work</a>
+        <a href="index.html">About Me</a>
+    </div>   
+    <div onclick="jumpTop()" id="top">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    
+    <div id="bg">
+        <p1>CONTACT</p1>
+        <hr>
+    </div>
+    <span class="arrow">
+        <a href="#target" id="a1">
+            <i class="fa fa-angle-down"></i>
+        </a>
+    </span>
+<br><br><br><br><br><br><br><br>
+    
+    <div class="wrapForm">
+    <form action="#" id="target">
+        <div class="r">
+            <div class="c1">
+                <label for="fname">First Name</label>
+            </div>
+            <div class="c2">
+                <input type="text" id="fn" name="fname" placeholder="First Name" required>
+            </div>
+        </div>
+        <div class="r">
+            <div class="c1">
+                <label for="lname">Last Name</label>
+            </div>
+            <div class="c2">
+                <input type="text" id="ln" name="lname" placeholder="Last Name" required>
+            </div>
+        </div>
+        <div class="r">
+            <div class="c1">
+                <label for="email">Email Address</label>
+            </div>
+            <div class="c2">
+                <input type="text" id="email" name="email" placeholder="Email Address" required>
+            </div>
+        </div>
+        <label for="inquiry">Type of Inquiry</label>
+        <select id="inquiry" name="inquiry">
+            <option value="business">Business</option>
+            <option value="hiring">Hiring</option>
+            <option value="questions">Questions</option>
+            <option value="others">Others</option>
+        </select>
+        <div class="r">
+            <div class="c1">
+                <label for="comment">Comments</label>
+            </div>
+            <div class="c2">
+                <textarea id="msg" name="msg" placeholder="Leave a Comment..." style="height:200px"></textarea>
+            </div>
+        </div>
+        <div class="r">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    </div>
+
+<!--
+<div class="wrapForm" id="target">
+    <form action="#">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="First Name">
+        
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" placeholder="Last Name">
+        
+        <br>
+        <label for="inquiry">Type of Inquiry</label>
+        <select id="inquiry" name="inquiry">
+            <option value="business">Business</option>
+            <option value="hiring">Hiring</option>
+            <option value="questions">Questions</option>
+        </select>
+        <br><br>
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments" placeholder="Leave a Comment..." style="height:200px"></textarea>
+        
+        <input type="submit" id="submit" value="Submit">
+    </form>
+</div>
+-->
+    <script src="app.js"></script>
+</body>
+    
+</html>

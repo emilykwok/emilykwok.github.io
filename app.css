@@ -1,0 +1,1296 @@
+/* ---NOTES---
+1. Home Page (Welcome to my portfolio... etc.
+2. About Me (Name, Info, Experience/Credentials
+3. Pieces/Work
+
+font-family: 'Playfair Display', serif;
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Satisfy', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Amatic SC', cursive;
+*/
+
+@media only screen and (max-width: 600px){
+html, body {
+    scroll-behavior: smooth;
+    height: 100vh;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+    background-color: white;
+    padding-top: 2em;
+    align-content: center;
+}
+
+.menu {
+    overflow: hidden;
+    background-color: transparent;
+    margin: 0 auto;
+    padding-bottom: 1em;
+    align-content: center;
+    display: table;
+    text-align: center;
+}
+
+.menu a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    align-content: center;
+    padding: 14px 16px;
+    font-size: 12pt;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu a:hover {
+    color: #DCD5C9;
+    cursor: pointer;
+}
+
+.dropdown {
+    float: left;
+    z-index: 1;
+    position: absolute;
+}
+
+
+/*
+.dropdown .dropbtn {
+    font-size: 12pt;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    z-index: 100;
+}
+
+.work {
+    display: none;
+    position: relative;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.work a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    z-index: 100;
+}
+
+.work a:hover {
+    color: #DCD5C9;
+    cursor: pointer;
+}
+
+.dropdown:hover .work {
+    display: block;
+    cursor: pointer;
+}
+*/
+
+#top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 40px;
+    cursor: pointer;
+    font-family: 'fa fa-angle-up';
+    color: black;
+}
+
+#top:hover {
+    color: #DCD5C9;
+}
+
+#bg {
+    background-color: #DCD5C9;
+    width: 70vw;
+    height: 50vh;
+    padding-left: 1em;
+    left: 0;
+    display: block;
+    margin: auto;
+    z-index: -100;
+    text-align: center;
+    padding-top: 3em;
+}
+
+p1 {
+    margin: auto;
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 45pt;
+    color: black;
+    padding-top: 1.5em;
+    text-align: center;
+}
+    
+p3 {
+    margin: auto;
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 30pt;
+    color: black;
+    padding-top: 1.5em;
+    text-align: center;
+}
+
+#title {
+    font-family: 'Satisfy', cursive;
+    font-size: 24pt;
+    color: black;
+    text-align: center;
+    top: 50px;
+    margin: 0 auto;
+    align-content: center;
+    display: table;
+    position: inherit;
+    text-decoration: none;
+}
+    
+#name {
+    font-family: 'Satisfy', cursive;
+    font-size: 24pt;
+    color: black;
+    text-align: center;
+    top: 50px;
+    margin: 0 auto;
+    align-content: center;
+    display: table;
+    position: inherit;
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+
+hr {
+    margin: 20px -20px 80px;
+    border: 0;
+    border-top: 2px solid black;
+}
+
+.arrow {
+    cursor: pointer;
+    font-family: 'fa fa-angle-down';
+    bottom: 20px;
+    left: 50%;
+    margin-left: -10px;
+    font-size: 40px;
+    animation: bounce 2s infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    line-height: 1;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    z-index: 200;
+    position: absolute;
+    animation-name: bounce;
+    padding-bottom: 1em;
+}
+    input[type=text], textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    option, select {
+        font-family: 'Playfair Display', serif;
+    }
+    
+    input[type=submit]{
+        background-color: white;
+        color: black;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    input[type=submit]:hover{
+        background-color: black;
+        color: white;
+        transition: .6s;
+    }
+    
+    .wrapForm {
+        border-radius: 5px;
+        background-color: #DCD5C9;
+        padding: 20px;
+    }
+    
+    .c1 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+    }
+    
+    .c2 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+    }
+    
+    .r:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+form {
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+    display: block;
+}    
+    
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+#a1 {
+    color: black;
+}
+
+#a1:hover {
+    color: #DCD5C9;
+}
+
+.bg1 {
+    background-image: url("imgs/bg2.png");
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg2 {
+    background-image: url("imgs/bg1.png");
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.caption {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    color: #DCD5C9;
+}
+
+.caption span.label {
+    background-color: white;
+    opacity: 0.80;
+    color: black;
+    padding: 18px;
+    font-size: 50pt;
+    font-family: 'Satisfy', cursive;
+}
+
+#about {
+    background-color: white;
+    font-size: 18pt;
+    padding: 50px 80px;
+    font-family: 'Playfair Display', serif;
+    text-align: justify;
+    height: 80vh;
+    width: 100vw;
+    padding-top: 10px;
+}
+
+#profile {
+    padding-top: 3em;
+    height: 60%;
+    margin: auto;
+    display: block;
+    padding-bottom: 2em;
+}    
+    
+#heading {
+    color: #DCD5C9;
+    padding: 50px 80px;
+    position: relative;
+    display: block;
+    background-color: #323C3F;
+    font-size: 18pt;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+#a2 {
+    color: #DCD5C9;
+    text-decoration: none;
+}
+
+#a2:hover {
+    color: white;
+}
+
+.bg3 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/hp.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.6;
+}
+
+    .bg3:hover {
+        opacity: 1;
+    }
+
+    .column {
+        float: left;
+        width: 20%;
+        padding: 10px;
+    }    
+    
+    .column img {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    
+    .column img:hover {
+        opacity: 1;
+    }
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .container {
+        position: relative;
+        display: none;
+    }
+    
+    #selectImg {
+        width: 20%;
+        display: block;
+        margin: auto;
+    }
+    
+    #imgText {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        color: white;
+        font-size: 16pt;
+    }
+
+    .closeBtn {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 16pt;
+    }
+    
+    iframe {
+        margin: 0 auto;
+        height: 345;
+        width: 420;
+        display: block;
+    }    
+    
+.bg4 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/eat1.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg5 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/eat2.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg6 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/eat3.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;   
+}
+
+.bg7 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/eat4.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg8 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/eat5.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg9 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/poster1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg10 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/poster2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg11 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/world.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg12 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/soldier.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg13 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/billie.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg14 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/xbox.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg15 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/goldfinch.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg17 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/mag.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+    
+}
+
+@media only screen and (min-width: 600px){
+html, body {
+    scroll-behavior: smooth;
+    height: 100vh;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+    background-color: white;
+    padding-top: 2em;
+    align-content: center;
+}
+
+.menu {
+    overflow: hidden;
+    background-color: transparent;
+    margin: 0 auto;
+    padding-bottom: 1em;
+    align-content: center;
+    display: table;
+    text-align: center;
+}
+
+.menu a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    align-content: center;
+    padding: 14px 16px;
+    font-size: 12pt;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu a:hover {
+    color: #DCD5C9;
+    cursor: pointer;
+}
+
+#name {
+    font-family: 'Satisfy', cursive;
+    font-size: 24pt;
+    color: black;
+    text-align: center;
+    top: 50px;
+    margin: 0 auto;
+    align-content: center;
+    display: table;
+    position: inherit;
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+    
+/*
+.dropdown {
+    float: left;
+    z-index: 1;
+    position: absolute;
+}
+
+.dropdown .dropbtn {
+    font-size: 12pt;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    z-index: 100;
+}
+
+.work {
+    display: none;
+    position: relative;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.work a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    z-index: 100;
+}
+
+.work a:hover {
+    color: #DCD5C9;
+    cursor: pointer;
+}
+
+.dropdown:hover .work {
+    display: block;
+    cursor: pointer;
+}
+*/
+
+#top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 40px;
+    cursor: pointer;
+    font-family: 'fa fa-angle-up';
+    color: black;
+}
+
+#top:hover {
+    color: #DCD5C9;
+}
+
+#bg {
+    background-color: #DCD5C9;
+    width: 60vw;
+    height: 60vh;
+    padding-left: 1em;
+    left: 0;
+    display: block;
+    margin: auto;
+    z-index: -100;
+    text-align: center;
+}
+
+p1 {
+    margin: auto;
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 60pt;
+    color: black;
+    padding-top: 1.5em;
+    text-align: center;
+}
+
+p3 {
+    margin: auto;
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 45pt;
+    color: black;
+    padding-top: 1.5em;
+    text-align: center;
+}
+    
+#title {
+    font-family: 'Satisfy', cursive;
+    font-size: 24pt;
+    color: black;
+    text-align: center;
+    top: 50px;
+    margin: 0 auto;
+    align-content: center;
+    display: table;
+    position: inherit;
+    text-decoration: none;
+}
+    
+#profile {
+    padding-top: 3em;
+    height: 60%;
+    margin: auto;
+    display: block;
+    padding-bottom: 2em;
+}    
+
+hr {
+    margin: 20px -20px 80px;
+    border: 0;
+    border-top: 2px solid black;
+}
+
+.arrow {
+    cursor: pointer;
+    font-family: 'fa fa-angle-down';
+    bottom: 20px;
+    left: 50%;
+    margin-left: -10px;
+    font-size: 40px;
+    animation: bounce 2s infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    line-height: 1;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    z-index: 200;
+    position: absolute;
+    animation-name: bounce;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+#a1 {
+    color: black;
+}
+
+#a1:hover {
+    color: #DCD5C9;
+}
+
+.bg1 {
+    background-image: url("imgs/bg2.png");
+    min-height: 90%;
+    max-width: 62%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    margin: auto;
+    display: block;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg2 {
+    background-image: url("imgs/bg1.png");
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+    
+.caption {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    color: #DCD5C9;
+}
+
+.caption span.label {
+    background-color: white;
+    opacity: 0.80;
+    color: black;
+    padding: 18px;
+    font-size: 50pt;
+    font-family: 'Satisfy', cursive;
+}
+
+#about {
+    background-color: white;
+    font-size: 18pt;
+    padding: 50px 80px;
+    font-family: 'Playfair Display', serif;
+    text-align: justify;
+    height: 80vh;
+    width: 60vw;
+    margin: auto;
+    display: block;
+    padding-top: 10px;
+}
+
+#heading {
+    color: #DCD5C9;
+    padding: 50px 80px;
+    position: relative;
+    display: block;
+    background-color: #323C3F;
+    font-size: 18pt;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+#a2 {
+    color: #DCD5C9;
+    text-decoration: none;
+}
+
+#a2:hover {
+    color: white;
+}
+
+.bg3 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/hp.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.6;
+}
+    
+    .bg3:hover {
+        opacity: 1;
+    }
+
+    .column {
+        float: left;
+        width: 20%;
+        padding: 10px;
+    }    
+    
+    .column img {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    
+    .column img:hover {
+        opacity: 1;
+    }
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .container {
+        position: relative;
+        display: none;
+    }
+    
+    #selectImg {
+        margin: auto;
+        display: block;
+    }
+    
+    #imgText {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        color: white;
+        font-size: 16pt;
+    }
+
+    .closeBtn {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 16pt;
+    }
+    
+     iframe {
+        margin: 0 auto;
+        height: 70vh;
+        width: 70vw;
+        display: block;
+    }   
+    
+    input[type=text], textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    input[type=submit]{
+        background-color: white;
+        color: black;
+        font-family: 'Playfair Display', serif;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+    }
+    
+    input[type=submit]:hover{
+        background-color: black;
+        color: white;
+        transition: .6s;
+    }
+    
+    .wrapForm {
+        border-radius: 5px;
+        background-color: #DCD5C9;
+        padding: 20px;
+    }
+    
+    .c1 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+    }
+    
+    .c2 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+    }
+    
+    .r:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+form {
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+    display: block;
+}    
+    
+.bg4 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/eat1.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg5 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/eat2.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg6 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/eat3.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;   
+}
+
+.bg7 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/eat4.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg8 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/eat5.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg9 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/poster1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg10 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/poster2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg11 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/world.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg12 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/soldier.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg13 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/billie.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg14 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/xbox.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg15 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/goldfinch.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg17 {
+    min-height: 100%;
+/*    for all bg classes*/
+    position: relative;
+    opacity: 0.80;
+    background-image: url("imgs/mag.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+    }
+
+.gallery {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: 'Satisfy', cursive;
+    font-size: 16pt;
+    text-shadow: 2px 2px grey;
+    cursor: pointer;
+}
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+        opacity: 0.6;
+        cursor: pointer;
+    }  
+
+    div.gallery img:hover {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        cursor: pointer;
+    }    
+
+* {
+    box-sizing: border-box;
+}
+
+    .desc {
+        padding: 15px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-decoration: none;
+        color: white;
+    }    
+
+    .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 19.99%;
+    }   
+
+#selectImg {
+        max-width: 50%;
+    }
+
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+    .responsive {
+        width: 49.99%;
+        margin: 6px 0;
+    }
+    .gallery {
+        font-size: 16pt;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 100%;
+    }
+    .gallery {
+        font-size: 36pt;
+    }
+}
+
+
+/*
+--FORMAT--
+
+Parallax for All Work:
+1. Harry Potter WordPress Site (Link + Screenshot + Sitemap)
+2. Eatiquette (Mockup + Application)
+3. Dream World Illustration
+4. Soldier Illustration
+5. XBOX Illustration
+6. BILLIExADOBE Piece
+7. Solo Pasta (Styleguide + Wireframe + Mockup)
+8. Goldfinch (Logo + Website)
+9. BBC Posters
+10. Thailand Magazine 
+
+Categories:
+- Web Development (1, 2) - if I can fix the Starbucks application I'll add that too
+- Illustration (3, 4, 5, 6) 
+- Branding (7, 8 - may move to web development once wordpress site is made)
+- Graphic Design (8, 9)
+- Animation (10)
+
+Navigation Bar:
+- About Me
+- My Work
+    - Web Development
+    - Illustration
+    - Branding
+    - Graphic Design
+    - Animation
+- Instagram
+- LinkedIn
+*/
